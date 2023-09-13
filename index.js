@@ -34,8 +34,9 @@ app.get(`/fruits/:name`, (req, resp) => {
   fruits.forEach((el) => {
     if (el.name.toLowerCase() == fruitName) {
       //   console.log(el);
-      resp.send(`Return a specific fruit with name: ${el.name}`);
+      resp.send(el);
       found = true;
+      // console.log(el.name);
     }
   });
   if (!found) {
